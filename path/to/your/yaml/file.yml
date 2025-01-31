@@ -1,0 +1,55 @@
+Creating a YAML file that meets your specific criteria can be quite complex. However, given that you're looking for a detailed YAML file, here's an example to give you a sense of what such a workflow might look like:
+
+```yaml
+name: CI Workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build with Python backend and ReactJS frontend
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.7', '3.8', '3.9']
+        
+    steps:
+      - name: Fetch the latest version of the source code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+          
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Identify frontend 
+        run: echo "Frontend is not available."
+
+      - name: Identify backend
+        run: echo "Backend is Python (${{ matrix.python-version }})."
+
+      - name: Identify framework
+        run: echo "Framework is ReactJS."
+
+      - name: Compile program
+        run: echo "Compiling the program."  # Replace with actual command to compile program
+
+      - name: Run program
+        run: echo "Running the program."   # Replace with actual command to run program
+
+      - name: Run tests
+        run: |
+          echo "Running tests."   # Replace with actual command to run tests
+```
+Please note that this is just a representative example and some parts are placeholders, and hence they do not perform real actions. For instance, "echo" commands are used only as placeholders for the actual commands you would use to compile
