@@ -48,5 +48,3 @@ jobs:
       - name: Run tests
         run: |
           echo "Running tests."   # Replace with actual command to run tests
-```
-Please note that this is just a representative example and some parts are placeholders, and hence they do not perform real actions. For instance, "echo" commands are used only as placeholders for the actual commands you would use to compile
