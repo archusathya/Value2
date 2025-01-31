@@ -1,6 +1,3 @@
-Creating a YAML file that meets your specific criteria can be quite complex. However, given that you're looking for a detailed YAML file, here's an example to give you a sense of what such a workflow might look like:
-
-```yaml
 name: CI Workflow
 
 on:
